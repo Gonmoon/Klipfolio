@@ -205,7 +205,7 @@ body {
 .header__list-item::last-child {
   margin: 0;
 }
-.header__list-item a, .header__list-item span {
+.header__list-item a {
   color: #3D455C;
 }
 .header__list-item_more {
@@ -219,12 +219,14 @@ body {
           flex-direction: column;
 }
 .header__list-item_more span {
+  color: #333;
+  cursor: pointer;
   position: relative;
   z-index: 5;
 }
 .header__list-item_more span:after {
   content: url("../img/header/arrow.svg");
-  margin: 0 0 0 7px;
+  margin: 0 5px 0 7px;
 }
 .header__log-in {
   font-weight: 800;
@@ -233,11 +235,11 @@ body {
 .menu {
   padding: 0 20px 0 5px;
   background-color: #eee;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
 }
 .menu span::after {
   content: url("../img/header/arrow.svg");
-  margin: 0 0 0 7px;
+  margin: 0 5px 0 7px;
   position: absolute;
   -webkit-animation: 0.2s linear 0s normal forwards 1 running arrowRot;
           animation: 0.2s linear 0s normal forwards 1 running arrowRot;
@@ -249,9 +251,9 @@ body {
           animation: 0.3s linear 0s normal forwards 1 running menu;
   width: 100%;
   position: absolute;
-  z-index: 1;
-  top: 17px;
+  top: 100%;
   left: 0;
+  z-index: 1;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -260,7 +262,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #eee;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   padding: 5px;
 }
 .menu ul li a {
